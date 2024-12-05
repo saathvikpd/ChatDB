@@ -80,3 +80,6 @@ const QueryResults = ({ results }) => {
 };
 
 export default QueryResults;
+
+
+

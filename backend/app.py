@@ -5,6 +5,7 @@ import sqlite3
 from werkzeug.utils import secure_filename
 from utils import generate_sql_query, anchoring
 from config import ANCHOR_TOL
+import json
 
 app = Flask(__name__)
 CORS(app)
@@ -49,6 +50,8 @@ def upload_file():
                 schema[table_name] = [column[1] for column in columns]  # Extract column names
 
             connection.close()
+            with open("./schema.txt", "+w") as f:
+                f.write(json.dumps(schema))
             return jsonify({
                 'message': 'File uploaded successfully',
                 'file_path': file_path,
@@ -69,14 +72,17 @@ def generate_sql():
 
     if not user_input or not file_path:
         return jsonify({"error": "Query and file path are required"}), 400
-
+    
+    with open("./schema.txt", "r") as f:
+        schema_context = f.read()
+        
     # Connect to the uploaded database
     if True:
         connection = sqlite3.connect(file_path)
         cursor = connection.cursor()
 
         # Generate SQL query (use your GPT-4 integration here)
-        sql_query, explanation = generate_sql_query(user_input)  # Example static query; replace with GPT-4 logic
+        sql_query, explanation = generate_sql_query(schema_context, user_input)  # Example static query; replace with GPT-4 logic
 
         stop = False
 
@@ -88,7 +94,7 @@ def generate_sql():
             old_inputs = {sql_query.replace("\n", " ")}
             i = 1
             while not stop and i < ANCHOR_TOL:
-                sql_query, explanation = anchoring(user_input, old_inputs)
+                sql_query, explanation = anchoring(schema_context, user_input, old_inputs)
                 
                 try:
                     cursor.execute(sql_query)

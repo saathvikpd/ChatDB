@@ -1,0 +1,1 @@
+{"CARRIERS": ["cid", "name"], "MONTHS": ["mid", "month"], "WEEKDAYS": ["did", "day_of_week"], "FLIGHTS": ["fid", "month_id", "day_of_month", "day_of_week_id", "carrier_id", "flight_num", "origin_city", "origin_state", "dest_city", "dest_state", "departure_delay", "taxi_out", "arrival_delay", "canceled", "actual_time", "distance", "capacity", "price"]}

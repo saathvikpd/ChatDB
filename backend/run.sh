@@ -6,7 +6,7 @@ curl https://api.x.ai/v1/chat/completions     -H "Content-Type: application/json
             },
             {
             "role": "user",
-            "content": "The list of old queries are invalid. Generate a correct query, STRICTLY different from the old queries, for the given user request. Output ONLY the SQL query, no reasoning: User request: Show all flights in April. Old queries:  SELECT * FROM flights WHERE EXTRACT(MONTH FROM departure_date) = 4; ,  SELECT * FROM flights WHERE departure_date BETWEEN '2023-04-01' AND '2023-04-30'; ,  SELECT * FROM flights WHERE departure_date >= '2023-04-01' AND departure_date < '2023-05-01'; ,  SELECT * FROM flights WHERE MONTH(departure_date) = 4;  SQL query:"
+            "content": "Based on the provided database schema, convert the following request into an SQL query, and DO NOT explain your reasoning. ONLY output the SQL query: Database schema: {"CARRIERS": ["cid", "name"], "MONTHS": ["mid", "month"], "WEEKDAYS": ["did", "day_of_week"], "FLIGHTS": ["fid", "month_id", "day_of_month", "day_of_week_id", "carrier_id", "flight_num", "origin_city", "origin_state", "dest_city", "dest_state", "departure_delay", "taxi_out", "arrival_delay", "canceled", "actual_time", "distance", "capacity", "price"]} User request: display flights in April. SQL query:"
             }
         ],
         "model": "grok-beta",
