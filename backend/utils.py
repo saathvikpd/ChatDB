@@ -15,7 +15,7 @@ def generate_sql_query(user_input):
             }},
             {{
             "role": "user",
-            "content": "Convert the following request into an SQL query, and DO NOT explain your reasoning. ONLY output the SQL query: User request: {user_input}. SQL query:"
+            "content": "Based on the provided database schema, convert the following request into an SQL query, and DO NOT explain your reasoning. ONLY output the SQL query: User request: {user_input}. SQL query:"
             }}
         ],
         "model": "grok-beta",
