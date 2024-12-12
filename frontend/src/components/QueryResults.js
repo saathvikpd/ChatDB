@@ -1,3 +1,5 @@
+// GPT-generated file
+
 import React from "react";
 import {
   Card,
