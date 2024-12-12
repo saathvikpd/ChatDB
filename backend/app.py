@@ -77,13 +77,14 @@ def generate_sql():
         schema_context = f.read()
         
     # Connect to the uploaded database
-    if True:
+    if True
         connection = sqlite3.connect(file_path)
         cursor = connection.cursor()
 
         # Generate SQL query (use your GPT-4 integration here)
         sql_query, explanation = generate_sql_query(schema_context, user_input)  # Example static query; replace with GPT-4 logic
 
+        # Anchoring Protocol
         stop = False
 
         try:
