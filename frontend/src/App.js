@@ -1,3 +1,5 @@
+// GPT-generated file
+
 import React, { useState } from "react";
 import QueryForm from "./components/QueryForm";
 import QueryResults from "./components/QueryResults";
