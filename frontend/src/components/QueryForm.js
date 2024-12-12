@@ -1,3 +1,5 @@
+// GPT-generated file
+
 import React, { useState } from "react";
 import { uploadDatabase, generateSQL } from "../api";
 import "../styles.css";
