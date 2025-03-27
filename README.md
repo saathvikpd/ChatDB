@@ -1,30 +1,42 @@
-## About the project
+# 🧠 Natural Language SQL Interface
 
-This is an interface where a user can upload a custom .db database file and carry out data anylytics tasks in plain english text.
-It is super useful for people just getting started with SQL!
+Welcome to this lightweight interface that allows users to **upload custom `.db` files** and perform **data analytics using plain English**.  
+It’s especially useful for **beginners who are new to SQL** and want a simple, intuitive way to query databases without writing complex code.
 
-## How to run the code?
+---
 
-### Creating environment
-```zsh
+## 🚀 Getting Started
+
+Follow the steps below to set up the project on your local machine.
+
+### 🛠️ 1. Create a Python Virtual Environment
+
+```bash
 python3 -m venv my_env
 source my_env/bin/activate
 ```
 
-### Setting up and starting backend server
-```zsh
+### 📦 2. Backend Setup & Launch
+
+```bash
 cd ./backend
 pip install -r requirements.txt
 python app.py
 ```
 
-### Setting up and running the frontend
-Open new terminal window and change directory into the repo
-```zsh
+### 💻 3. Frontend Setup & Launch
+
+Open a new terminal window and navigate to the frontend directory:
+
+```bash
 cd ./frontend
 npm install
 npm start
 ```
 
-The app should be running on:
-http://localhost:3000/
+### 🌐 4. Access the App
+
+Once everything is up and running, visit:
+👉 http://localhost:3000
+
+
