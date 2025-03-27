@@ -1,7 +1,6 @@
 # 🧠 Natural Language SQL Interface
 
-Welcome to this lightweight interface that allows users to **upload custom `.db` files** and perform **data analytics using plain English**.  
-It’s especially useful for **beginners who are new to SQL** and want a simple, intuitive way to query databases without writing complex code.
+Welcome to this lightweight interface that allows users to **upload custom `.db` files** and perform **data analytics using plain English**. It’s especially useful for **beginners who are new to SQL** and want a simple, intuitive way to query databases without writing complex code.
 
 ---
 
