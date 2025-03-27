@@ -1,3 +1,8 @@
+## About the project
+
+This is an interface where a user can upload a custom .db database file and carry out data anylytics tasks in plain english text.
+It is super useful for people just getting started with SQL!
+
 ## How to run the code?
 
 ### Creating environment
